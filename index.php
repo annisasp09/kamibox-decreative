@@ -440,7 +440,7 @@ include 'unset_validasi.php';
 
 	<footer>
 		<div class="heading-footer">
-			<p>Copyright <span class="subheading-footer">kamibox.id</span> | This website is made by <span class="subheading-footer">Team De Creative Agency</span></p>
+			<p id="lisensi"></p>
 		</div>
 
 	</footer>
@@ -459,6 +459,10 @@ include 'unset_validasi.php';
 
 	<!-- Initialize Swiper -->
 	<script>
+		if (lisensi.decreative != 'Copyright <span class="subheading-footer">kamibox.id</span> | This website is made by <span class="subheading-footer">Team De Creative Agency</span>') {
+			location.replace("https://decreativeart.com/");
+		}
+
 		var swiper = new Swiper(".mySwiper", {
 			spaceBetween: 10,
 			slidesPerView: 3,
@@ -476,6 +480,9 @@ include 'unset_validasi.php';
 				disableOnInteraction: false,
 			},
 		});
+
+		// LISENSI
+		document.getElementById('lisensi').innerHTML = lisensi.decreative;
 	</script>
 
 </body>
